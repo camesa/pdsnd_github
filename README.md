@@ -9,9 +9,9 @@ Uses Python to explore data related to bike share systems for three major cities
 It shows statistics such as travel times, popular stations and trips, and bikeshare user data based on user filter selection
 
 ### Files used
-chicago.csv
-new_york_city.csv
-washington.csv
+- chicago.csv 
+- new_york_city.csv 
+- washington.csv 
 
 ### Requirements 
 - [Python3](https://www.python.org/)
