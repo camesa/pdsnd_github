@@ -13,5 +13,12 @@ chicago.csv
 new_york_city.csv
 washington.csv
 
+### Requirements 
+- [Python3](https://www.python.org/)
+- [Time](https://docs.python.org/2/library/time.html)
+- [Pandas](https://pandas.pydata.org/)
+- [Numpy](https://numpy.org/)
+- [Tabulate](https://pypi.org/project/tabulate/)
+
 ### Credits
 Template from https://github.com/udacity/pdsnd_github
