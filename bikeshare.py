@@ -110,7 +110,7 @@ def time_stats(df):
     print('Most popular day of the week for travel is {}\n'.format(popular_dow))
 
     # Displays the most common start hour
-    popular_hour = df['hour'].mode()[0]
+    popular_hour = df['hour'].mode()
     print('Most popular time of the day for travel is at {}hs\n'.format(popular_hour))
 
 
@@ -161,6 +161,14 @@ def trip_duration_stats(df):
     # Displays mean travel time in minutes
     trip_duration =  df['Trip Duration'].mean()
     print('The average travel time is {} minutes'.format(round(trip_duration / 60, 2)))
+
+    # Displays maximun travel time in minutes
+    max_trip = df['Trip Duration'].max()
+    print('The max travel time was {} minutes'.format(round(max_trip / 60, 2)))
+
+    # Displays minimun travel time in minutes
+    min_trip = df['Trip Duration'].min()
+    print('The max travel time was {} minutes'.format(round(min_trip / 60, 2)))  
 
     print('\nThis took %s seconds.' % (time.time() - start_time))
     print('-'*40)
@@ -217,15 +225,15 @@ def user_stats(df):
 def raw_data(df):
     """
     Asks user to if he/she wants to see raw data for the selected city.
-    It will display 5 rows of data at a time until user decides types 'no'
+    It will display 10 rows of data at a time until user decides types 'no'
 
     """
     view_rdata = input('\nWould you like to see raw data of individual trips? Enter yes or no\n').lower()
     rdata_index = 0
     while view_rdata.lower() == 'yes':
-        print(df.iloc[rdata_index:rdata_index+5])
-        rdata_index += 5
-        rdata_cont = input('Would you like to see 5 more rows?:Enter yes or no.\n' ).lower()
+        print(df.iloc[rdata_index:rdata_index+10])
+        rdata_index += 10
+        rdata_cont = input('Would you like to see 10 more rows?:Enter yes or no.\n' ).lower()
         if rdata_cont.lower() != 'yes':
             break
 
