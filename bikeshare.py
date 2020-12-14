@@ -105,7 +105,7 @@ def time_stats(df):
     print('Most popular day of the week for travel is {}\n'.format(popular_dow))
 
     # Displays the most common start hour
-    popular_hour = df['hour'].mode()[0]
+    popular_hour = df['hour'].mode()
     print('Most popular time of the day for travel is at {}hs\n'.format(popular_hour))
 
 
@@ -156,6 +156,10 @@ def trip_duration_stats(df):
     # Displays mean travel time in minutes
     trip_duration =  df['Trip Duration'].mean()
     print('The average travel time is {} minutes'.format(round(trip_duration / 60, 2)))
+
+    # Displays maximun travel time in minutes
+    max_trip = df['Trip Duration'].max()
+    print('The max travel time was {} minutes'.format(round(max_trip / 60, 2)))    
 
     print('\nThis took %s seconds.' % (time.time() - start_time))
     print('-'*40)
