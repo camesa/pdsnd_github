@@ -3,6 +3,11 @@ import pandas as pd
 import numpy as np
 from tabulate import tabulate
 
+"""
+Uses Python to explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington.
+It shows statistics such as travel times, popular stations and trips, and bikeshare user data based on user filter selection
+"""
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
