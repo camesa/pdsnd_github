@@ -212,15 +212,15 @@ def user_stats(df):
 def raw_data(df):
     """
     Asks user to if he/she wants to see raw data for the selected city.
-    It will display 5 rows of data at a time until user decides types 'no'
+    It will display 10 rows of data at a time until user decides types 'no'
 
     """
     view_rdata = input('\nWould you like to see raw data of individual trips? Enter yes or no\n').lower()
     rdata_index = 0
     while view_rdata.lower() == 'yes':
-        print(df.iloc[rdata_index:rdata_index+5])
-        rdata_index += 5
-        rdata_cont = input('Would you like to see 5 more rows?:Enter yes or no.\n' ).lower()
+        print(df.iloc[rdata_index:rdata_index+10])
+        rdata_index += 10
+        rdata_cont = input('Would you like to see 10 more rows?:Enter yes or no.\n' ).lower()
         if rdata_cont.lower() != 'yes':
             break
 
